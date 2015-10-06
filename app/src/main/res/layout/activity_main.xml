@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/textView"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:text="Auther Name\nTitle\nContacts"
+        android:textSize="16dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Some Company\nStreet Address\nCity, State\nzip code"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print PDF"
+        android:id="@+id/button1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="printPDF" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@id/textView3"
+        android:layout_above="@id/button1"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For some applications, such as drawing apps, page layout apps and other apps that focus on graphic output, creating beautiful printed pages is a key feature. In this case, it is not enough to print an image or an HTML document. The print output for these types of applications requires precise control of everything that goes into a page, including fonts, text flow, page breaks, headers, footers, and graphic elements."
+                android:id="@+id/textView4"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creating print output that is completely customized for your application requires more programming investment than the previously discussed approaches. You must build components that communicate with the print framework, adjust to printer settings, draw page elements and manage printing on multiple pages.  This lesson shows you how you connect with the print manager, create a print adapter and build content for printing."
+                android:id="@+id/textView5"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When your application manages the printing process directly, the first step after receiving a print request from your user is to connect to the Android print framework and obtain an instance of the PrintManager class. This class allows you to initialize a print job and begin the printing lifecycle. The following code example shows how to get the print manager and start the printing process"
+                android:id="@+id/textView6"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The example code above demonstrates how to name a print job and set an instance of the PrintDocumentAdapter class which handles the steps of the printing lifecycle. The implementation of the print adapter class is discussed in the next section."
+                android:id="@+id/textView7"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
